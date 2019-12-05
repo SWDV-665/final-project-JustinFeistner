@@ -14,4 +14,8 @@ export class Tab2Page {
     this.photoService.loadSaved();
   }
 
+  deletePhoto(photo) {
+    this.photoService.removePhoto(photo)
+  }
+
 }

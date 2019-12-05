@@ -36,6 +36,11 @@ export class PhotoService {
       this.photos = photos || [];
     });
   }
+
+  removePhoto(photo) {
+    this.photos.splice(photo, 1)
+  }
+
 }
 
 
