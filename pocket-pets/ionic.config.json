@@ -1,0 +1,7 @@
+{
+  "name": "pocket-pets",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
