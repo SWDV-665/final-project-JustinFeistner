@@ -9,5 +9,5 @@ import { PhotoService } from '../services/photo.service';
 export class Tab1Page {
 
   constructor(public photoService: PhotoService) {}
-
+//tab1 only uses photoService so it can take a picture and save to the gallery.
 }
