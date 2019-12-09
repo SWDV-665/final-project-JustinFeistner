@@ -1,12 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
+    <ion-title color="tertiary">
       Photo Gallery
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="light">
     <h3 class="no-item" text-center *ngIf="photoService.photos.length === 0">
         No pictures have been taken yet!
     </h3>
@@ -19,9 +19,9 @@
       </ion-row>
   </ion-grid>
   
-  <ion-list lines="none">
-    <ion-item>
-      <ion-icon slot="start" color="medium" name="trash"></ion-icon>
+  <ion-list lines="none" *ngIf="photoService.photos.length !== 0">
+    <ion-item >
+      <ion-icon slot="start" name="trash" color="tertiary"></ion-icon>
       <ion-label>To delete an image, just tap it!</ion-label>
     </ion-item>
   </ion-list>
