@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PhotoService } from '../services/photo.service';
+import { ToastController } from '@ionic/angular'
 
 @Component({
   selector: 'app-tab2',
@@ -9,12 +10,17 @@ import { PhotoService } from '../services/photo.service';
 export class Tab2Page {
   currentImage: any;
 
-  constructor( public photoService: PhotoService) { }
+  constructor( public photoService: PhotoService, public toastController: ToastController) { }
   ngOnInit() {
     this.photoService.loadSaved();
   }
 
-  deletePhoto(photo) {
+  async deletePhoto(photo) {
+    const toast = await this.toastController.create({
+      message: "Picture Deleted",
+      duration: 2000
+    })
+    toast.present()
     this.photoService.removePhoto(photo)
   }
 
