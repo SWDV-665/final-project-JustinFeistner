@@ -1,13 +1,13 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
+    <ion-title color="tertiary">
       Camera
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card class="welcome-card">
+  <ion-card class="welcome-card" color="tertiary">
     <img src="/assets/emma.JPG" alt="" />
     <ion-card-header>
       <ion-card-subtitle>Get Started</ion-card-subtitle>
@@ -25,18 +25,18 @@
       <ion-label>Resources</ion-label>
     </ion-list-header>
     <ion-item href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-      <ion-icon slot="start" color="medium" name="umbrella"></ion-icon>
+      <ion-icon slot="start" color="medium" name="umbrella" color="tertiary"></ion-icon>
       <ion-label>Need some inspiration?</ion-label>
     </ion-item>
     <ion-item href="mailto:jfeistner1@live.maryville.edu">
-      <ion-icon slot="start" color="medium" name="paper-plane"></ion-icon>
+      <ion-icon slot="start" color="medium" name="paper-plane" color="tertiary"></ion-icon>
       <ion-label>Need Help?</ion-label>
     </ion-item>
   </ion-list>
 
   <!--Floating Camera Icon-->
-  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
-    <ion-fab-button (click)="photoService.takePicture()">
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed" >
+    <ion-fab-button (click)="photoService.takePicture()" color="tertiary">
       <ion-icon name="camera"></ion-icon>
     </ion-fab-button>
   </ion-fab>
