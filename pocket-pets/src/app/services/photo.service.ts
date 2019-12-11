@@ -38,8 +38,8 @@ export class PhotoService {
     });
   }
 
-  removePhoto(photo) {
-    this.photos.splice(photo, 1)
+  removePhoto(index) {
+    this.photos.splice(index, 1)
   }
 
 }
