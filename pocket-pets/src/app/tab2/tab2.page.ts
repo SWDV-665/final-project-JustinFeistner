@@ -15,13 +15,13 @@ export class Tab2Page {
     this.photoService.loadSaved();
   }
 
-  async deletePhoto(photo) {
+  async deletePhoto(photo, index) {
     const toast = await this.toastController.create({
       message: "Picture Deleted",
       duration: 2000
     })
     toast.present()
-    this.photoService.removePhoto(photo)
+    this.photoService.removePhoto(index)
   }
 
 }
